@@ -1,13 +1,13 @@
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(to right, #3494e6,#ec5ead);
+    background: linear-gradient(to right, #3494e6, #ec5ead);
 }
 
-.card{
+.card {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -16,11 +16,11 @@ body{
     text-align: center;
 }
 
-.input-container{
+.input-container {
     margin-bottom: 15px;
 }
 
-input{
+input {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -31,13 +31,13 @@ input{
 }
 
 input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button{
+input::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
 
-button{
+button {
     background-color: #4caf50;
     color: #fff;
     padding: 10px;
@@ -47,6 +47,6 @@ button{
     transition: background-color 0.3s ease-in-out;
 }
 
-button:hover{
+button:hover {
     background-color: #45a049;
 }

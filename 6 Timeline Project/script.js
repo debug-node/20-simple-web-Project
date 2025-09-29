@@ -5,47 +5,45 @@ const circles = document.querySelectorAll(".circle");
 
 let step = 1;
 
-function mainCode(){
+function mainCode() {
 
-    circles.forEach((circles,index)=>{
-        if(index < step){
+    circles.forEach((circles, index) => {
+        if (index < step) {
             circles.classList.add("active");
-        }else{
+        } else {
             circles.classList.remove("active");
         }
     });
 
     const actives = document.querySelectorAll(".active");
-    timeline.style.width = `${
-        ((actives.length - 1) / (circles.length - 1)) * 100    
-    }%`;
+    timeline.style.width = `${((actives.length - 1) / (circles.length - 1)) * 100
+        }%`;
 
-    if(step === 1){
-        prev.disabled = true; 
-    }else if (step === circles.length){
+    if (step === 1) {
+        prev.disabled = true;
+    } else if (step === circles.length) {
         next.disabled = true;
-    }else{
+    } else {
         prev.disabled = false;
         next.disabled = false;
     }
 
 }
 
-next.addEventListener("click",()=>{
+next.addEventListener("click", () => {
 
     step++;
-    if(step > circles.length){
+    if (step > circles.length) {
         step = circles.length;
     }
 
     mainCode();
 });
 
-prev.addEventListener("click",()=>{
+prev.addEventListener("click", () => {
 
     step--;
-    if(step < 1)
-    {
+    if (step < 1) {
         step = 1;
     }
 

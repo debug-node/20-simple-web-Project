@@ -1,38 +1,43 @@
-const v = document.getElementById("v")
+const A = document.getElementById("first")
+const d = document.getElementById("d")
 const i = document.getElementById("i")
-const j = document.getElementById("j")
-const a = document.getElementById("a")
+const j = document.getElementById("t")
 const y = document.getElementById("y")
-const vijay = document.getElementById("complete")
+const a = document.getElementById("a")
+const aditya = document.getElementById("complete")
 
-v.addEventListener("click",()=>{
-    v.style.display = "none";
+A.addEventListener("click", () => {
+    A.style.display = "none";
+    d.style.display = "block";
+});
+
+d.addEventListener("click", () => {
+    d.style.display = "none";
     i.style.display = "block";
 });
 
-i.addEventListener("click",()=>{
+i.addEventListener("click", () => {
     i.style.display = "none";
-    j.style.display = "block";
+    t.style.display = "block";
 });
 
-j.addEventListener("click",()=>{
-    j.style.display = "none";
+t.addEventListener("click", () => {
+    t.style.display = "none";
+    y.style.display = "block";
+});
+y.addEventListener("click", () => {
+    y.style.display = "none";
     a.style.display = "block";
 });
 
-a.addEventListener("click",()=>{
+a.addEventListener("click", () => {
     a.style.display = "none";
-    y.style.display = "block";
+    aditya.style.display = "block";
 });
 
-y.addEventListener("click",()=>{
-    y.style.display = "none";
-    vijay.style.display = "block";
-});
-
-vijay.addEventListener("click",()=>{
-    vijay.style.display = "none";
-    v.style.display = "block";
+aditya.addEventListener("click", () => {
+    aditya.style.display = "none";
+    A.style.display = "block";
 });
 
 

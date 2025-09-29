@@ -1,4 +1,4 @@
-body{
+body {
     font-family: sans-serif;
     display: flex;
     justify-content: center;
@@ -7,7 +7,7 @@ body{
     background: linear-gradient(to right, #33001b, #ff0084);
 }
 
-.container{
+.container {
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -20,25 +20,26 @@ body{
 }
 
 @keyframes neonGlow {
-    from{
+    from {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 
     }
-    to{
+
+    to {
         box-shadow: 0px 0px 20px #e61380,
-        0px 0px 30px #ce1c78,
-        0px 0px 40px #ff0084;
+            0px 0px 30px #ce1c78,
+            0px 0px 40px #ff0084;
     }
-    
+
 }
 
-h1{
+h1 {
     color: #ffffff;
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-textarea{
+textarea {
     width: 500px;
     height: 350px;
     margin: 10px auto;
@@ -49,23 +50,24 @@ textarea{
     border: 1px solid #dddddd;
     border-radius: 5px;
     resize: none;
-    animation: slideIn 1s ease; 
+    animation: slideIn 1s ease;
 
 }
 
 @keyframes slideIn {
-    from{
+    from {
         opacity: 0;
         transform: translateY(-20px);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translateY(0);
     }
-    
+
 }
 
-button{
+button {
     padding: 15px 30px;
     background-color: #4caf50;
     width: 500px;
@@ -79,11 +81,11 @@ button{
     transition: background-color 0.3s ease;
 }
 
-button:hover{
+button:hover {
     background-color: #33022b;
 }
 
-#result{
+#result {
     font-size: 20px;
     margin-top: 20px;
     color: azure;

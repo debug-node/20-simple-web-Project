@@ -1,30 +1,27 @@
-
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: cursive;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(
-        90deg,
-        rgba(2,0,36,1) 0%,
-        rgba(65, 101, 12, 1) 35%,
-        rgba(0, 24, 89, 1) 100%
-    );
+    background: linear-gradient(90deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(65, 101, 12, 1) 35%,
+            rgba(0, 24, 89, 1) 100%);
     overflow: hidden;
 }
 
-.wrapper{
+.wrapper {
     text-align: center;
 }
 
-.container{
+.container {
     width: 300px;
     height: 200px;
     display: inline-block;
@@ -33,8 +30,8 @@ body{
     background: #87ceeb;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out,
-                background 0.3s ease-in-out,
-                box-shadow 0.3s ease-in-out;
+        background 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
 }
 
 .text {
@@ -43,20 +40,20 @@ body{
     line-height: 48px;
 }
 
-.subText{
+.subText {
     font-weight: 700;
     font-size: 16px;
     line-height: 14px;
 }
 
-.heading{
+.heading {
     height: 70px;
     color: #fff;
     text-align: center;
     vertical-align: top;
 }
 
-.name{
+.name {
     height: 100px;
     background: #fff;
     font-size: 45px;

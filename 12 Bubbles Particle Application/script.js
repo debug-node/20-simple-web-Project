@@ -1,7 +1,7 @@
 
-setInterval(particles,300);
+setInterval(particles, 300);
 
-function particles(){
+function particles() {
 
     const div = document.querySelector("div");
     const particles = document.createElement("span");
@@ -16,9 +16,9 @@ function particles(){
 
     div.appendChild(particles);
 
-    setTimeout(()=>{
+    setTimeout(() => {
         particles.remove();
 
-    },2000);
+    }, 2000);
 
 }

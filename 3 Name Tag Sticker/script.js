@@ -1,7 +1,7 @@
 let wrapper = document.getElementsByClassName("wrapper")[0];
 let template = document.getElementsByTagName("template")[0];
 
-let names = ["Vijay","Shaurya","Ajay"];
+let names = ["Vijay", "Shaurya", "Ajay"];
 
 
 let colors = [
@@ -13,27 +13,27 @@ let colors = [
 
 ];
 
-let sticker = function (name){
+let sticker = function (name) {
 
-    let div = template.content.querySelector("div");
-    let nameOfStick = div.querySelector(".name");
+  let div = template.content.querySelector("div");
+  let nameOfStick = div.querySelector(".name");
 
-    nameOfStick.innerHTML = name;
+  nameOfStick.innerHTML = name;
 
-    div.style.background = colors[Math.floor(Math.random() * colors.length)];
+  div.style.background = colors[Math.floor(Math.random() * colors.length)];
 
-    div.style.transform = "rotate(" + (Math.random() * 40 -20) + "deg)";
+  div.style.transform = "rotate(" + (Math.random() * 40 - 20) + "deg)";
 
 
-    let node = document.importNode(div,true);
-    wrapper.appendChild(node)
+  let node = document.importNode(div, true);
+  wrapper.appendChild(node)
 
 }
 
 
-setTimeout(refereshPage,1000);
-function refereshPage(){
-    location.reload();
+setTimeout(refereshPage, 1000);
+function refereshPage() {
+  location.reload();
 }
 
 names.forEach(sticker);

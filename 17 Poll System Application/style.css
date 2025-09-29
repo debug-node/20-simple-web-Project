@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #f3f3f3;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,58 +9,59 @@ body{
     height: 100vh;
 }
 
-.container{
+.container {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow:  0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    animation: cardAnimation 1s ease-in-out ;
+    animation: cardAnimation 1s ease-in-out;
 }
 
 @keyframes cardAnimation {
-    0%{
+    0% {
         transform: scale(0);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: scale(1);
         opacity: 1;
     }
-    
+
 }
 
-h1{
+h1 {
     color: #ff1493;
     font-size: 32px;
-    opacity: 1;    
+    opacity: 1;
 }
 
-.poll{
+.poll {
     margin-top: 20px;
 }
 
-h2{
+h2 {
     color: #ff1493;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-.options{
+.options {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.option{
-   margin-bottom: 10px;     
+.option {
+    margin-bottom: 10px;
 }
 
-input[type="radio"]{
+input[type="radio"] {
     display: none;
 }
 
-label{
+label {
     display: inline-block;
     background-color: #f3f3f3;
     padding: 10px 20px;
@@ -70,21 +71,22 @@ label{
 
 }
 
-.option{
+.option {
     color: black;
 
 }
-.option:hover{
-   background-color: #ff1493;
-  
+
+.option:hover {
+    background-color: #ff1493;
+
 }
 
-.option input[type="radio"]:checked + label{
+.option input[type="radio"]:checked+label {
     background-color: #ff1493;
     color: #fff;
 }
 
-button{
+button {
     background-color: #ff1493;
     color: #fff;
     padding: 10px 20px;
@@ -95,11 +97,11 @@ button{
     transition: background-color 0.3s;
 }
 
-button:hover{
+button:hover {
     background-color: #ff0055;
 }
 
-#result{
+#result {
     margin-top: 20px;
     font-size: 20px;
     color: #ff1493;
@@ -108,18 +110,18 @@ button:hover{
     align-items: center;
 }
 
-.option-result{
+.option-result {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
     width: 100%;
 }
 
-.option-text{
+.option-text {
     flex: 1;
 }
 
-.bar-container{
+.bar-container {
     flex: 3;
     background-color: #f3f3f3;
     height: 10px;
@@ -129,7 +131,7 @@ button:hover{
 
 }
 
-.bar{
+.bar {
 
     height: 100%;
     background-color: #ff1493;
@@ -138,7 +140,7 @@ button:hover{
 
 }
 
-.percentage{
+.percentage {
     flex: 1;
     margin-left: 10px;
     font-weight: bold;

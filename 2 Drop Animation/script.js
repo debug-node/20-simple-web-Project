@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 
-function dropped(){
+function dropped() {
 
     const drop = document.createElement("span");
 
@@ -9,13 +9,13 @@ function dropped(){
     drop.style.top = Math.random() * innerHeight + "px";
     drop.style.left = Math.random() * innerWidth + "px";
 
-    setTimeout(()=>{
+    setTimeout(() => {
         drop.remove();
-    },6500);
+    }, 6500);
 
     container.appendChild(drop)
 
 
 }
 
-setInterval(dropped,500);
+setInterval(dropped, 500);

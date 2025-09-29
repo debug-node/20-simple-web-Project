@@ -1,26 +1,25 @@
-
-body{
+body {
 
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to right, rgb(242,112,156), rgb(255,148,114));
+    background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
 }
 
-.container{
+.container {
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-button{
+button {
     padding: 1rem;
     background-color: skyblue;
 }
 
-#coin{
+#coin {
     position: relative;
     width: 15rem;
     height: 15rem;
@@ -28,7 +27,7 @@ button{
     transform-style: preserve-3d;
 }
 
-#coin div{
+#coin div {
     width: 100%;
     height: 100%;
     border: 2px solid black;
@@ -38,47 +37,47 @@ button{
     position: absolute;
 }
 
-.headsClass{
+.headsClass {
     background-image: url("https://cdn.pixabay.com/photo/2019/04/15/20/42/bitcoin-4130299_1280.png");
 }
 
-.animate-heads{
+.animate-heads {
     animation: flipHeads 3s;
     animation-fill-mode: forwards;
 }
 
 @keyframes flipHeads {
 
-    from{
+    from {
         transform: rotateY(0deg);
     }
 
-    to{
+    to {
         transform: rotateY(1800deg);
     }
-    
+
 }
 
-.tailsClass{
+.tailsClass {
     background-image: url("https://cdn.pixabay.com/photo/2016/03/31/15/03/phoenix-1292958_640.png");
 
     transform: rotateY(-180deg);
 
 }
 
-.animate-tails{
+.animate-tails {
     animation: flipTails 3s;
     animation-fill-mode: forwards;
 }
 
 @keyframes flipTails {
 
-    from{
+    from {
         transform: rotateY(0deg);
     }
 
-    to{
+    to {
         transform: rotateY(1620deg);
     }
-    
+
 }
