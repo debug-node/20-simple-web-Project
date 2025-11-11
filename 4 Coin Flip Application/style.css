@@ -97,3 +97,8 @@ button[disabled] { opacity: 0.6; cursor: not-allowed; }
   :root { --coin-size: 12rem; }
   button { padding: 0.6rem 0.85rem; }
 }
+
+#status{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
