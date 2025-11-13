@@ -1,30 +1,59 @@
 function convertTemperature() {
-
-
     const celsiusInput = document.getElementById("celsius");
     const fahrenheitInput = document.getElementById("fahrenheit");
+    const kelvinInput = document.getElementById("kelvin");
 
+    const celsiusRaw = celsiusInput.value.trim();
+    const fahrenheitRaw = fahrenheitInput.value.trim();
+    const kelvinRaw = kelvinInput.value.trim();
 
-    if (!isNaN(celsiusInput.value)) {
+    const celsiusProvided = celsiusRaw !== "";
+    const fahrenheitProvided = fahrenheitRaw !== "";
+    const kelvinProvided = kelvinRaw !== "";
 
-        const celsiusValue = parseFloat(celsiusInput.value);
-        const fahrenheitValue = (celsiusValue * 9 / 5) + 32;
+    // Prefer Celsius if user entered more than one value
+    if (celsiusProvided && !isNaN(Number(celsiusRaw))) {
 
-        fahrenheitInput.value = fahrenheitValue.toFixed(2);
+        const c = Number(celsiusRaw);
+        const f = (c * 9 / 5) + 32;
+        const k = c + 273.15;
 
-    } else if (!isNaN(fahrenheitInput.value)) {
-
-        const fahrenheitValue = fahrenheitInput.value;
-        const celsiusValue = (fahrenheitValue - 32) * 5 / 9;
-
-
-        celsiusInput.value = celsiusValue.toFixed(2);
-
-
-    } else {
-        alert("Please enter a Valid Number")
+        fahrenheitInput.value = f.toFixed(2);
+        kelvinInput.value = k.toFixed(2);
+        return;
     }
 
+    // Fahrenheit → Celsius + Kelvin
+    if (fahrenheitProvided && !isNaN(Number(fahrenheitRaw))) {
 
+        const f = Number(fahrenheitRaw);
+        const c = (f - 32) * 5 / 9;
+        const k = c + 273.15;
 
+        celsiusInput.value = c.toFixed(2);
+        kelvinInput.value = k.toFixed(2);
+        return;
+    }
+
+    // Kelvin → Celsius + Fahrenheit
+    if (kelvinProvided && !isNaN(Number(kelvinRaw))) {
+
+        const k = Number(kelvinRaw);
+        const c = k - 273.15;
+        const f = (c * 9 / 5) + 32;
+
+        celsiusInput.value = c.toFixed(2);
+        fahrenheitInput.value = f.toFixed(2);
+        return;
+    }
+
+    // If nothing valid
+    alert("Please enter a valid number in Celsius, Fahrenheit or Kelvin.");
+}
+
+function resetInputs() {
+    document.getElementById("celsius").value = "";
+    document.getElementById("fahrenheit").value = "";
+    document.getElementById("kelvin").value = "";
+    document.getElementById("celsius").focus();
 }
