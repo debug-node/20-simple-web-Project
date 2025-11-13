@@ -45,3 +45,24 @@ function drag() {
 }
 
 drag();
+
+// ---------------------------
+// RESET BUTTON FUNCTIONALITY
+// ---------------------------
+const resetBtn = document.getElementById("resetBtn");
+const allBoxes = document.querySelectorAll(".box");
+
+// Save initial positions (0,0) when page loads
+allBoxes.forEach(box => {
+    if (!box.style.left) box.style.left = "0px";
+    if (!box.style.top) box.style.top = "0px";
+});
+
+// Reset positions on click
+resetBtn.addEventListener("click", () => {
+    allBoxes.forEach(box => {
+        box.style.left = "0px";
+        box.style.top = "0px";
+        box.style.transform = "";  // remove any drag transform
+    });
+});
