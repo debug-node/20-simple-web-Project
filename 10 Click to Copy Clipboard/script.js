@@ -1,10 +1,8 @@
-
 const button = document.getElementById("copy");
 const main_paragraph = document.getElementById("main_paragraph");
 const message = document.getElementById("message");
 
 function copyToClipboard(element) {
-
 
     navigator.clipboard.writeText(element.textContent)
         .then(() => {
@@ -22,6 +20,5 @@ function copyToClipboard(element) {
         });
 
 }
-
 
 button.addEventListener("click", () => copyToClipboard(main_paragraph));
