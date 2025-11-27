@@ -1,11 +1,11 @@
 const toggleBtn = document.querySelector(".toggleBtn");
 const links = document.querySelector(".links");
 
-toggleBtn.addEventListener("click", () => {
+if (toggleBtn && links) {
+    toggleBtn.addEventListener("click", () => {
+        const isActive = links.classList.toggle("active");
+        toggleBtn.classList.toggle("open");
 
-    if (links.classList.contains("active")) {
-        links.classList.remove("active");
-    } else {
-        links.classList.add("active");
-    }
-});
+        toggleBtn.setAttribute("aria-expanded", isActive ? "true" : "false");
+    });
+}
